@@ -6,20 +6,20 @@
     <title>Abdelrahman Waleed | Full-Stack Developer</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* --- Design V2: Minimalist & Text-Focused --- */
+        /* --- Design V3: Minimalist Dark Theme --- */
         :root {
-            --primary-color: #005f73; /* A deep, professional teal */
-            --background-color: #f4f4f4; /* Light grey background */
-            --surface-color: #ffffff; /* White for cards */
-            --text-color: #0a0a0a; /* Nearly black for text */
-            --text-muted-color: #555; /* Grey for subtitles */
-            --border-color: #e0e0e0; /* Light border for separation */
+            --primary-color: #4db6ac; /* A brighter, modern teal for dark backgrounds */
+            --background-color: #121212; /* Dark grey background */
+            --surface-color: #1e1e1e; /* Slightly lighter grey for cards */
+            --text-color: #e0e0e0; /* Off-white for text */
+            --text-muted-color: #888; /* Grey for subtitles */
+            --border-color: #333; /* Dark border for separation */
             --font-family: 'Inter', sans-serif;
         }
 
@@ -52,7 +52,7 @@
             position: fixed;
             width: 100%;
             top: 0; left: 0; z-index: 1000;
-            background-color: rgba(255, 255, 255, 0.85);
+            background-color: rgba(18, 18, 18, 0.85);
             backdrop-filter: blur(8px);
             border-bottom: 1px solid var(--border-color);
         }
@@ -103,7 +103,7 @@
             margin-right: 1rem;
             border: 2px solid var(--primary-color);
         }
-        .btn-primary { background-color: var(--primary-color); color: white; }
+        .btn-primary { background-color: var(--primary-color); color: var(--background-color); }
         .btn-primary:hover { background-color: transparent; color: var(--primary-color); }
 
         /* --- About Section --- */
@@ -127,11 +127,7 @@
         .skill-card li { margin-bottom: 0.5rem; font-weight: 400; color: var(--text-muted-color); }
 
         /* --- Projects Section --- */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
+        .projects-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
         .project-card {
             background-color: var(--surface-color);
             border: 1px solid var(--border-color);
@@ -139,33 +135,17 @@
             padding: 2rem;
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
-        .project-card:hover {
-            border-color: var(--primary-color);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
+        .project-card:hover { border-color: var(--primary-color); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         .project-card h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
         .project-card p { color: var(--text-muted-color); margin-bottom: 1.5rem; }
-        .project-tags span {
-            display: inline-block;
-            background-color: var(--background-color);
-            padding: 0.4rem 0.8rem;
-            border-radius: 5px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
+        .project-tags span { display: inline-block; background-color: var(--background-color); border: 1px solid var(--border-color); padding: 0.4rem 0.8rem; border-radius: 5px; font-size: 0.8rem; font-weight: 600; margin-right: 0.5rem; margin-bottom: 0.5rem; }
         .project-links { margin-top: 1rem; }
         .project-links a { color: var(--primary-color); text-decoration: none; font-weight: 600; margin-right: 1.5rem; }
         .project-links a:hover { text-decoration: underline; }
 
         /* --- Education Section --- */
         .education-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
-        .education-item {
-            background: var(--surface-color);
-            padding: 1.5rem;
-            border-left: 4px solid var(--primary-color);
-        }
+        .education-item { background: var(--surface-color); padding: 1.5rem; border-left: 4px solid var(--primary-color); }
         .education-item h3 { font-size: 1.2rem; }
         .education-item p { color: var(--text-muted-color); margin: 0.25rem 0; }
         .education-item .date { font-weight: 600; color: var(--primary-color); }
@@ -187,7 +167,7 @@
 
         /* --- Responsive Design --- */
         @media(max-width: 768px) {
-            .nav-links { position: fixed; left: -100%; top: 4.5rem; flex-direction: column; background-color: var(--surface-color); width: 100%; text-align: center; transition: 0.3s; box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05); }
+            .nav-links { position: fixed; left: -100%; top: 4.5rem; flex-direction: column; background-color: var(--surface-color); width: 100%; text-align: center; transition: 0.3s; box-shadow: 0 10px 27px rgba(0, 0, 0, 0.2); }
             .nav-links.active { left: 0; }
             .nav-links li { padding: 1rem 0; border-bottom: 1px solid var(--border-color); }
             .nav-links li:last-child { border-bottom: none; }
@@ -225,7 +205,7 @@
         <section id="home" class="hero">
             <div class="container fade-in">
                 <div class="hero-content">
-                    <h1>Abdelrahman Waleed Ebrahim</h1>
+                    <h1>Abdelrahman Waleed</h1>
                     <p class="subtitle">Full-Stack Web Developer</p>
                     <p class="description">I build responsive, user-friendly web experiences. With a drive for continuous learning, I am passionate about bringing ideas to life through clean code and thoughtful design.</p>
                     <a href="#contact" class="btn btn-primary">Get In Touch</a>
@@ -317,7 +297,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Abdelrahman Waleed Ebrahim. All Rights Reserved.</p>
+        <p>&copy; 2025 Abdelrahman Waleed. All Rights Reserved.</p>
     </footer>
 
     <script>
